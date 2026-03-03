@@ -1,0 +1,119 @@
+/* --- Base Styles --- */
+body {
+    background-color: #000; /* Black background */
+    color: #e0e0e0; /* Light gray text */
+    font-family: 'Courier New', monospace; /* Authentic monospace font */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Terminal Container --- */
+.terminal-container {
+    width: 90%;
+    max-width: 1100px;
+    border: 1px solid #333; /* Subtle border for structure */
+    background-color: #080808; /* Slightly lighter background than body */
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+/* --- Terminal Header --- */
+header {
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.user-prompt {
+    color: #00ffff; /* Cyan prompt */
+}
+
+/* --- Content Wrapper (Flex Layout) --- */
+.content-wrapper {
+    display: flex; /* Creates the two-column layout from photos */
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left Column: Portrait */
+.ascii-portrait {
+    flex: 0 0 45%; /* Fix width of portrait area */
+    display: flex;
+    justify-content: center;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+.ascii-portrait pre {
+    color: #666; /* Dimmer color for the portrait itself */
+    font-size: 8px; /* Adjusted font size for resolution */
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Right Column: Logo, Text, Nav */
+.text-and-nav {
+    flex: 1; /* Use the remaining space */
+}
+
+/* --- ASCII Logo --- */
+.ascii-logo pre {
+    color: #00ffff; /* The cyan logo color */
+    font-size: 10px;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+/* --- Placeholder Text --- */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #b0b0b0; /* Bio text slightly softer gray */
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #b0b0b0; /* Soft gray nav links */
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #fff; /* White on hover */
+    transform: translateX(3px); /* Small movement effect */
+}
+
+/* Active navigation style */
+.nav-link.active span {
+    color: #00ffff; /* Active link is cyan */
+}
+
+.nav-link.active span::before {
+    content: '+ '; /* Adds the selected '+' symbol */
+    font-weight: bold;
+}
+
+/* --- Status Bar / Footer --- */
+footer {
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #666; /* Gray footer text */
+}
